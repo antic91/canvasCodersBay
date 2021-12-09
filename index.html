@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+
+    <div id="wrapper" class="display">
+        
+        <!--Header with bootstrap class container and display class for flex-->
+        <header class="display">
+            <span class="display logo">
+                <img src="./logo.svg" alt="">
+            </span>
+
+            <h1>Canvas</h1>
+        </header>
+
+        <!--main display class = display:flex...-->
+        <main class="display">
+
+            <!--Firset section about canvas-->
+            <section class="display">
+                <h3>Canvas</h3>
+
+                <ul class="ul">
+                    <li>Ein Tag, mit dem Sie auf einem starken und präzisen sowie auch niedrigem Niveau zeichnen können.</li>
+                    <li>Grafikfunktionen werden automatisch verwendet</li>
+                    <li>Rendering ist optimiert</li>
+                    <li>Canvas besteht aus Context</li>
+                    <li>Der Context ermöglicht ein Zeichnen</li>
+                    <li>Zeichenobjekte:
+                        <ul class="ul secondUl">
+                            <li>Rechtecke</li>
+                            <li>Linien</li>
+                            <li>Kurven / Kreise</li>
+                            <li>Bezierkurven</li>
+                            <li>Bilder</li>
+                            <li>Text</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <!--Second section***How do we use canvas element-->
+            <section class="display">
+                <h3>Verwenden des Canvas-Elements</h3>
+
+                <ul class="ul">
+                    <li>&lt;canvas id="game"&gt; &lt;/canvas&gt;</li>
+                    <li>var canvas = document.getElementById(“game”);</li>
+                    <li>var c = canvas.getContext(‘2d’);</li>
+                </ul>
+            </section>
+
+            <!--Second three***How do we Draw a rectangle-->
+            <section class="display">
+                <h3>Zeichne ein Rechteck</h3>
+
+                <ul class="ul">
+                    <li>c.fillRect(x, y, Breite, Höhe)</li>
+                    <li>c.rect(x, y, Breite, Höhe)</li>
+                    <li>c.fillStyle = 'rgba(0, 255, 125, 0.3)' - definiert den zu verwendenden Stil.</li>
+                </ul>
+            </section>
+
+            <!--Example c.gillRect display flex-->
+            <section class="display example">
+                <canvas width="585px" height="200px" id="fillRect"></canvas>
+                <canvas width="585px" height="200px" id="rect"></canvas>
+                <h4>* c.fillRect</h4>
+                <h4>* c.rect</h4>
+            </section>
+
+
+            <!--Third Example***How do we Draw a Linien-->
+            <section class="display">
+                <h3>Linien</h3>
+
+                <ul class="ul">
+                    <li>Wir beginnen die Zeichnung mit: – c.beginPath() </li>
+                    <li>Die Zeichnung beenden wir mit: – c.stroke() / c.fill() </li>
+                    <li>c.moveTo(x,y) – Bewegt "Hand" zur Position</li>
+                    <li>c.linieTo(x,y) – Verbindet den aktuellen Punkt mit Punkt x, y mithilfe einer Linie</li>
+                    <li>c.strokeStyle – definiert den Strichzeichnungsstil</li>
+                </ul>
+            </section>
+
+            <!--Example c.gillRect display flex-->
+            <section class="display example">
+                <div class="display codeExample">
+                    <h5>c.beginPath();</h5>
+                    <h5>c.moveTo(200, 100);</h5>
+                    <h5>c.lineTo(450, 150);</h5>
+                    <h5>c.lineTo(450,50);</h5>
+                    <h5>c.strokeStyle = “red</h5>
+                    <h5>c.stroke()</h5>
+                </div>
+                <canvas width="585px" height="200px" id="linie"></canvas>
+            </section>
+
+
+            <!--Fourth Example***Gradient-->
+            <section class="display">
+                <h3>Gradient</h3>
+
+                <ul class="ul">
+                    <li>var gradient = c.createLinearGradient(x0, y0, x1, x1);</li>
+                    <li>x0,y0 – Anfangskoordinaten des Gradienten</li>
+                    <li>x1,y1 – endgültige Gradientenkoordinaten</li>
+                        <ul class="ul secondUl">
+                            <li style="color: magenta;">gradient.addColorStop("0", "magenta");</li>
+                            <li style="color: blue;">gradient.addColorStop("0.5", "blue");</li>
+                            <li style="color: red;">gradient.addColorStop("1.0", "red");</li>
+                        </ul>
+                    <li>Kann zu <b>fillStyle</b> oder <b>StrokeStyle</b> Attribute hinzugefügt werden.</li>
+                        <ul class="ul secondUl">
+                            <li>c.fillStyle = gradient</li>
+                        </ul>
+                </ul>
+            </section>
+
+            <!--Example Canvas Gradient display flex-->
+            <section class="display example">
+                <canvas width="1320px" height="600px" id="gradient"></canvas>
+            </section>
+
+
+             <!--Fifth Example***How do we Draw a Kurve-->
+            <section class="display">
+                <h3>Kurve</h3>
+
+                <ul class="ul">
+                    <li>c.arc(x, y, Radius, Anfangswinkel, endWinkel) </li>
+                    <li>(Das optionale 6. Argument, wenn es <i>true</i> ist, bedeutet Richtung gegen den Uhrzeigersinn)</li>
+                </ul>
+            </section>
+
+             <!--Example Canvas Kurve display flex-->
+            <section class="display example">
+                <canvas width="1320px" height="200px" id="kurve"></canvas>
+            </section>
+
+            <!--Sixt Example***Text display flex-->
+            <section class="display">
+                <h3>Text</h3>
+
+                <ul class="ul">
+                    <li style="list-style: none;">c.font = "30px Arial";</li>
+                    <li style="list-style: none;">c.fillText("Hello World", 10, 50);</li>
+                    <li style="list-style: none;">oder</li>
+                    <li style="list-style: none;">c.font = "30px Arial";</li>
+                    <li style="list-style: none;">c.strokeText("Hello World", 10, 50);</li>
+                </ul>
+            </section>
+
+            <!--Sevent Example***clearRect display flex-->
+            <section class="display">
+                <h3>clearRect</h3>
+
+                <ul class="ul">
+                    <li>Löscht den Inhalt innerhalb des Rechtecks</li>
+                    <li style="list-style: none; margin-left:37px">c.clearRect(0, 0, Breite, Höhe)</li>
+                </ul>
+            </section>
+
+            <!--eight Example***requestAnimationFrame display flex-->
+            <section class="display">
+                <h3>requestAnimationFrame</h3>
+
+                <ul class="ul">
+                    <li>Aktiviert Animation innerhalb des Canvas-Elements</li>
+                    <li>Wird aufgerufen, wenn der Code erneut ausgeführt werden muss Plotten</li>
+                    <li>Wird bei Bedarf vom Browser aufgerufen</li>
+                    <li>Die Idee ist, etwa 60 Anrufe pro Sekunde zu haben</li>
+                    <li>function animate() { <br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; requestAnimationFrame(animate) <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                    </li>
+                </ul>
+            </section>
+
+            <!--Nine Example***Interaktion mit Canvas display flex-->
+            <section class="display">
+                <h3>Interaktion mit Canvas</h3>
+
+                <ul class="ul">
+                    <li>Ein gewöhnliches Event</li>
+                    <li>onmousemove, onmouseclick...</li>
+                </ul>
+            </section>
+        </main>
+
+
+        <!--Example Canvas Circle Animation display flex-->
+            <section class="display example ex1">
+                <canvas width="1320px" height="400px" id="animateCircle"></canvas>
+            </section>
+            <section class="display example ex1Button">
+                <button class="button" onclick="startAnimation()">Start animation</button>
+            </section>
+
+            <!--Example Canvas Circle Game Animation display flex-->
+            <section class="display example ex1">
+                <canvas onclick="clicked(event)" width="1320px" height="800px" id="animateGame"></canvas>
+            </section>
+            <section class="display example ex1Button">
+                <button class="button" onclick="startGame()">Start Game</button>
+            </section>
+
+    </div>
+    <script src="file.js"></script>
+</body>
+</html>

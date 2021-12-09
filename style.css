@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+html{
+overflow-y: auto;
+font-size: 93.8%;
+/*15px*/
+}
+
+body {
+background: white;
+font-family: 'Roboto', sans-serif;font-weight: 400;
+line-height: 1.75;
+color: #000000;
+font-weight: 400;
+}
+
+/* header and all text sizes*/
+
+h1 {
+    font-size: 3.52rem!important;
+}
+
+h2 {
+    font-size: 2.441rem;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.953rem;
+    line-height: 1.3;
+}
+
+h4 {
+    font-size: 1.563rem;
+    line-height: 1.3;
+}
+
+h5 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+h5 {
+    font-size: 1.25rem;
+    line-height: 1.15;
+}
+p{
+    font-size: 1rem;
+}
+
+small,
+.text_small {
+    font-size: 0.8rem;
+}
+
+
+/**************************************************************************************/
+
+.display{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+#wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    height: max-content;
+    justify-content: center;
+}
+
+/*header*/
+header{
+    position: relative;
+    width: 1320px;
+    height: max-content;
+}
+
+.logo{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    padding: 20px;
+    background-color: #0050ff;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+/*Logo*/
+.logo img{
+    position: relative;
+    width: 200px;
+
+}
+header h1{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 50px 0;
+    font-weight: 900;
+    line-height: 0.9;
+
+}
+
+/*Main *******************************/
+main{
+    position: relative;
+    width: 1320px;
+    height: max-content;
+    padding: 0 20px;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    margin-bottom: 35px;
+}
+
+/*Section header*/
+section h3{
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* section list*/
+.ul{
+    position: relative;
+    width: 100%;
+    height: max-content;
+}
+
+/*List insection list*/
+.secondUl{
+    margin-left: 15px;
+    margin-top: 2.5px;
+}
+
+/*List element*/
+.ul li{
+    position: relative;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 5px 10px 0px 10px;
+    list-style:inside;
+}
+
+.secondUl li{
+    color: #0050ff;
+}
+
+/*examples wrapper*/
+.example{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    justify-content: space-between;
+}
+
+/*Canvas*/
+canvas{
+    position: relative;
+    border: 1px solid #0050ff;
+}
+/*Example title under canvas..*/
+.example h4{
+    width: 587px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+/*Div for code example for Canvas*/
+.codeExample{
+    position: relative;
+    width: 585px;
+    height: max-content;
+    min-height: 200px;
+    border: 1px solid red;
+    padding: 20px;
+    align-content: center;
+}
+/*headers in codeExample div*/
+.codeExample h5{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*center animations canvas*/
+.ex1{
+    width: 1320px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.ex1Button{
+    width: 1320px;
+    justify-content: flex-end;
+}
+
+/*Button start animation*/
+.button{
+    position: relative;
+    padding: 15px 40px;
+    background-color: #0050ff;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
