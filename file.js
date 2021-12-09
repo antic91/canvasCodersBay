@@ -182,14 +182,17 @@ function setRgba() {
     }
 }
 
-for (var i = 0; i < 50; i++){
-    var r = Math.floor(Math.random() * 31) + 10;
-    var x = Math.floor(Math.random() * ((1320) - 60 + 1) ) + 40;
-    var y = Math.floor(Math.random() * ((800) - 60 + 1)) + 40;
-    var vx = Math.floor(Math.random() * 5);
-    var vy = Math.floor(Math.random() * 5);
-    circlesArray.push(new Circle(x, y, r, 0, 360, vx, vy));
-    circlesArray[i].rgba = setRgba();
+function setUpGame() {
+    circlesArray = [];
+    for (var i = 0; i < 50; i++){
+        var r = Math.floor(Math.random() * 31) + 10;
+        var x = Math.floor(Math.random() * ((1320) - 60 + 1) ) + 40;
+        var y = Math.floor(Math.random() * ((800) - 60 + 1)) + 40;
+        var vx = Math.floor(Math.random() * 5);
+        var vy = Math.floor(Math.random() * 5);
+        circlesArray.push(new Circle(x, y, r, 0, 360, vx, vy));
+        circlesArray[i].rgba = setRgba();
+    }
 }
 
 function startAnimation() {
@@ -247,5 +250,7 @@ function clicked(event) {
 }
 
 function startGame() {
-    gameAnim()
+    setUpGame();
+    gameAnim();
+    document.getElementById("gameButton").disabled = true;
 }
